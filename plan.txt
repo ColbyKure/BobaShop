@@ -1,0 +1,66 @@
+**Boba Bear Frontend Architecture - Updated Overview**
+
+## **Project Overview**
+Boba Bear is a web application built with Next.js, TypeScript, and Tailwind CSS to provide an intuitive and seamless customer experience for ordering boba tea online. The frontend will integrate with a backend microservice architecture that supports multiple locations, processes transactions securely using Stripe, and manages real-time order updates.
+
+## **Core Features**
+1. **Customer-Facing Pages:**
+   - Home Page (Brand showcase, promotions, and quick access to ordering)
+   - Menu Page (Displays boba drinks and customization options)
+   - Order Page (Cart, checkout, and payment integration with Stripe)
+   - Order Tracking Page (Live updates on order status)
+   - User Account Page (Profile, order history, saved preferences)
+
+2. **Admin Dashboard:**
+   - Order Management (View and update order statuses in real-time)
+   - Inventory Management (Update menu items, stock availability)
+   - Store Management (Manage multiple locations and their settings)
+   - Sales Analytics (Track revenue, popular items, and customer trends)
+
+3. **Authentication & User Management:**
+   - User sign-up/login (OAuth, email/password authentication)
+   - Role-based access control (Customers, Store Admins, Super Admins)
+
+4. **State Management Strategy:**
+   - Global state management using Redux Toolkit
+   - API calls using React Query or Axios for efficient data fetching
+   - (Optional) Implement Redux Persist to maintain state across refreshes
+
+5. **Routing & Navigation:**
+   - Next.js `pages/` directory for server-side rendering (SSR) and static site generation (SSG)
+   - Protected routes for authenticated users (Admins and Customers)
+
+6. **API Integration:**
+   - Fetch menu items, order details, and user profiles from the backend
+   - Send order details and process transactions via Stripe API
+   - WebSockets or polling for real-time order updates
+
+7. **Responsive & UI/UX Considerations:**
+   - Mobile-first design with Tailwind CSS
+   - Smooth animations and transitions for a modern feel
+   - Dark mode support
+
+## **Development Roadmap**
+### **Phase 1: Project Setup & Boilerplate Code**
+- Initialize Next.js project with TypeScript and Tailwind CSS
+- Set up Redux Toolkit for state management
+- Establish Redux slices for cart, authentication, and orders
+
+### **Phase 2: Core Features Implementation**
+- Build UI components for Home, Menu, and Order Pages
+- Integrate API calls for fetching data
+- Implement authentication and user management with Redux
+
+### **Phase 3: Admin Dashboard & Order Management**
+- Develop dashboard UI with admin functionalities
+- Implement real-time order tracking
+- Add role-based authentication
+
+### **Phase 4: Testing & Deployment**
+- Conduct UI/UX testing and bug fixes
+- Optimize performance and SEO
+- Deploy on Vercel
+
+---
+This updated high-level overview reflects the latest architectural changes, including the use of Next.js with TypeScript, Redux Toolkit, and deployment via Vercel. Next, we can refine the component breakdown and API interactions further.
+
